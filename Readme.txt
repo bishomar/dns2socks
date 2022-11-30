@@ -64,16 +64,15 @@ DNS2SOCKS [/?] [/t] [/d] [/q] [l[a]:FilePath] [/u:User /p:Password]
 
 The default values for the addresses and ports are (in case you don't
 specify the command line arguments):
-Default Socks5ServerIP:Port = 127.0.0.1:9050
-Default DNSServerIPorName:Port = 46.182.19.48
-Default ListenIP:Port = 127.0.0.1:53
+Default Socks5ServerIP:Port = 127.0.0.1:1080
+Default DNSServerIPorName:Port = 8.8.4.4:53
+Default ListenIP:Port = 127.0.0.1:5335
 
-So the SOCKS server runs locally on the TCP port 9050 (Tor's default port;
-attention: for Tor Browser Bundle you must change it to 9150). The used
-DNS server is 46.182.19.48 (Digitalcourage e.V.). The DNS server must
-support TCP on port 53 as Tor doesn't support UDP via SOCKS. DNS2SOCKS
-listens on the UDP port 53 of 127.0.0.1 (only locally) - change this to
-0.0.0.0 for listening on all available local IPv4 addresses.
+So the SOCKS server runs locally on the TCP port 1080. The used DNS
+server is 8.8.4.4 (Digitalcourage e.V.). The DNS server must support
+TCP on port 53 as Tor doesn't support UDP via SOCKS. DNS2SOCKS listens
+on the UDP port 53 of 127.0.0.1 (only locally) - change this to 0.0.0.0
+for listening on all available local IPv4 addresses.
 
 You can launch DNS2SOCKS several times with different settings, for
 example to listen on IPv6 addresses additionally. To specify an IPv6
